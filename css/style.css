@@ -1,0 +1,413 @@
+/****** General ***********/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+a {
+    color: #242424;
+    text-decoration: none;
+}
+
+/*HEADER*/
+
+.header {
+    display: grid;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.sub-nav {
+    /* padding: 2em;*/
+    display: flex;
+}
+
+#logo {
+    width: 7em;
+    margin-right: auto;
+    padding: 1rem 0rem;
+}
+
+header a:hover {
+    text-decoration: overline #0065FC;
+    color: #0065FC;
+}
+
+nav a {
+    margin-left: 30px;
+}
+
+/*Recherche*/
+
+.searchHeaderTitle {
+    margin-bottom: 0.5rem;
+}
+
+.searchHeaderSubtitle {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.searchForm {
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.searchFormWrapicon {
+    background-color: #F2F2F2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+
+.searchFormWrapiconIcon {
+    margin-left: 0.1rem;
+}
+
+.searchFormSearchinput {
+    border-right: none;
+    border-left: none;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+}
+
+.searchFormSearchinput::placeholder {
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    color: #00000069;
+}
+
+.searchFormSubmitinput {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* filtres*/
+.searchFilters {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.searchFiltersTitle {
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.searchFiltersFilter {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: bold;
+}
+
+.searchFiltersFilter:last-child {
+    margin-right: 0;
+}
+
+.searchFiltersFilter:hover {
+    background-color: #f3f8ff;
+    transform: scale(1.015);
+}
+
+.searchFiltersFilterWrapicon {
+    background-color: transparent;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+}
+
+.searchFiltersFilterWrapiconIcon {
+    color: blue;
+}
+
+.searchFiltersFilterTitle {
+    margin: 0px 8px 0px -10px;
+}
+
+
+.searchResult {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.searchResultWrapicon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.searchResultWrapiconIcon {
+    color: #0065FC;
+}
+
+.searchResultText {
+    margin: 0;
+}
+
+/*fin zone recherche et filtres*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+
+    /*header*/
+    header {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: 3px solid red;
+    }
+
+    .sub-nav {
+        flex-basis: 100%;
+        max-width: 767.98px;
+    }
+
+    .sub-nav a {
+        flex-basis: 50%;
+        text-align: center;
+
+    }
+
+    .sub-nav:hover {
+        border-bottom: 3px solid blue;
+        border-top: transparent;
+    }
+
+    /* Recherche et filtres */
+        {
+        .searchForm {
+            display: flex;
+            width: 100%;
+        }
+
+        .searchFormSearchinput {
+            flex: 1;
+        }
+
+        .searchFormSubmitinputText {
+            display: none;
+        }
+
+        .searchFormSubmitinputIcon {
+            display: block;
+        }
+
+        .searchFiltersTitle {
+            width: 100%;
+        }
+
+        .searchFiltersFilter {
+            margin-right: 1rem;
+        }
+
+        .searchFormSubmitinputText {
+            display: block;
+        }
+
+    }
