@@ -410,8 +410,8 @@ a {
 }
 
 .title-activites {
-    grid-column: 1/-1;
-    margin: 1.25rem -3rem 1.75rem 0rem
+    /*grid-column: 1/-1;*/
+    margin: 3.25rem -3rem 0.75rem 0rem
 }
 .card-activites {
     justify-content: space-between;
@@ -419,6 +419,8 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
+    padding: 30px;
+    gap: 30px;
    /* grid-auto-rows: minmax(46px, auto);*/
 }
 .card-activites .card {
@@ -486,11 +488,10 @@ footer {
 .footerColumnLink:hover{
     text-decoration: underline;
   }
-  
+/*
 .footerColumnTitle{
         
-}
-
+*/
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
