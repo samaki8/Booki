@@ -45,7 +45,7 @@ header nav {
 }
 
 #logo {
-    width: 7em;
+    width: 5em;
     margin-right: auto;
     padding: 1rem 0rem;
 }
@@ -63,6 +63,8 @@ nav a {
 
 .searchHeaderTitle {
     margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    font-size: larger;
 
 }
 
@@ -185,7 +187,7 @@ nav a {
 
 .searchResultWrapicon {
     height: 2rem;
-    width: 2rem;
+    width: 4rem;
     min-height: 2rem;
     min-width: 2rem;
     border: solid 1px #d9d9d9;
