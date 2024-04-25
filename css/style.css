@@ -1,5 +1,6 @@
 /****** General ***********/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
 /*test githup desktop*/
 * {
     font-family: 'Raleway', sans-serif;
@@ -23,44 +24,117 @@ a {
 
 /*HEADER*/
 
+
 .header {
     display: grid;
     align-items: center;
     max-width: 1440px;
     margin: auto;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar navbar";
 }
 
-header nav {
+.headerNav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    max-width: 1440px;
-    margin: auto;
+    grid-area: navbar;
 }
 
-.sub-nav {
-    /* padding: 2em;*/
-    display: flex;
+.headerNavLink {
+    padding: 2rem;
+    font-weight: 500;
+    text-align: center;
+    transition-duration: 0.1s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
 }
 
-#logo {
-    width: 5em;
-    margin-right: auto;
-    padding: 1rem 0rem;
-}
-
-header a:hover {
-    text-decoration: overline #0065FC;
+.headerNavLink[data-active=true] {
     color: #0065FC;
 }
 
-nav a {
-    margin-left: 30px;
+.headerNavLink:hover {
+    color: #0065FC;
+    border-top: 3px #0065FC solid;
 }
 
-/*Recherche*/
+.logo {
+    width: 5em;
+    margin-right: auto;
+    padding: 1rem 0rem;
+    grid-area: logo ;
+}
+.logodiv {
+    grid-area: logo ;
+}
 
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (767.98px <= width <= 1024px) {
+    .header {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo . navbar";
+    }
+
+    .headerNavLink [data-active=true] {
+        border-top: 3px solid #0065FC;
+        border-top-color: transparent;
+
+    }
+
+    .headerNavLink:hover {
+        color: #0065FC;
+        border-top: 3px #0065FC solid;
+        border-bottom-color: transparent;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+    /*.header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo" "navbar";
+    */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .logo {
+        order: 0;
+    }
+    .logodiv {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    .headerNav {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .headerNavLink {
+        border-top: none;
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+    }
+
+    .headerNavLink [data-active=true] {
+        border-bottom-color: #0065FC;
+        border-top-color: transparent;
+    }
+
+    .headerNavLink:hover {
+        border-bottom-color: #0065FC;
+        border-top-color: transparent;
+    }
+}
+
+
+/*****recherche*********/
 .searchHeaderTitle {
     margin-bottom: 0.5rem;
     margin-top: 2rem;
@@ -120,9 +194,11 @@ nav a {
     font-size: 1rem;
     cursor: pointer;
 }
+
 .searchFormSubmitinputIcon {
     display: none;
-}    
+}
+
 /************************ filtres**********************/
 .searchFilters {
     display: flex;
@@ -292,25 +368,26 @@ a {
     margin-bottom: 6px;
     padding: 0;
 }
-.hebergement-cards{
+
+.hebergement-cards {
     justify-content: space-between;
     overflow: unset;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 34px;
     grid-auto-rows: minmax(46px, auto);
-  }
+}
 
 .hebergement-cards .card {
-  position: relative;
-  /*background-color: white;*/
-  border-radius: 20px;
-  margin-top: 30px;
-  margin-bottom: -50px;
-  box-shadow: 1px 4px 14px 1px #d7d8d9;
-  width: 100%;
-  height: 100%;
-  border: 4px solid white;
+    position: relative;
+    /*background-color: white;*/
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: -50px;
+    box-shadow: 1px 4px 14px 1px #d7d8d9;
+    width: 100%;
+    height: 100%;
+    border: 4px solid white;
 
 }
 
@@ -332,7 +409,7 @@ a {
 }
 
 .hebergement-cards .card-title {
-   /* margin-top: 10px;
+    /* margin-top: 10px;
     margin-bottom: 4px;*/
     margin: 0.25rem -3rem 0.75rem 0rem
 }
@@ -415,6 +492,7 @@ a {
     /*grid-column: 1/-1;*/
     margin: 3.25rem -3rem 0.75rem 0rem
 }
+
 .card-activites {
     justify-content: space-between;
     overflow: unset;
@@ -423,15 +501,16 @@ a {
     grid-gap: 15px;
     padding: 30px;
     gap: 30px;
-   /* grid-auto-rows: minmax(46px, auto);*/
+    /* grid-auto-rows: minmax(46px, auto);*/
 }
+
 .card-activites .card {
     box-shadow: 0 0 20px #0000002e;
-  border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition-duration: 0.1s;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.1s;
 }
 
 .card-activites .card img {
@@ -452,7 +531,7 @@ a {
 }
 
 .card-activites .title-activites {
-   /* margin-top: 10px;
+    /* margin-top: 10px;
     margin-bottom: 4px;*/
     margin: 1.25rem -3rem 1.75rem 0rem
 }
@@ -460,6 +539,7 @@ a {
 .card-activites .card-title {
     margin: 1.25rem -3rem 0.75rem 1rem
 }
+
 /****************************************footer*****************/
 footer {
     display: flex;
@@ -470,26 +550,31 @@ footer {
     margin-top: 20px;
     padding: 0 2rem;
     box-sizing: border-box;
-    
+
 }
+
 .footercolumncontent {
     list-style-type: none;
     margin-left: -40px;
-    align-items: flex-start ;
+    align-items: flex-start;
     justify-items: center;
 }
+
 .footerColumnwrapper {
     width: 30%;
     padding: 2rem 2rem;
-  
+
 }
+
 .footerColumnLink {
     display: block;
     margin: 1rem 0;
 }
-.footerColumnLink:hover{
+
+.footerColumnLink:hover {
     text-decoration: underline;
-  }
+}
+
 /*
 .footerColumnTitle{
         
@@ -534,43 +619,11 @@ footer {
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
 
-
-
     .main-container {
         width: 90%;
         max-width: 767.98px;
         padding: 0 1px;
         box-sizing: border-box;
-    }
-
-    /*header*/
-    header {
-        width: 100%;
-        max-width: 767.98px;
-        padding: 0;
-        border: 3px solid transparent;
-    }
-
-    #logo {
-        width: 5em;
-        margin: auto;
-        padding: 1rem 0rem;
-    }
-
-    .sub-nav {
-        flex-basis: 100%;
-        max-width: 767.98px;
-    }
-
-    .sub-nav a {
-        flex-basis: 50%;
-        text-align: center;
-    }
-
-    .sub-nav a:hover {
-        border-bottom: 3px solid blue;
-        text-decoration: overline transparent;
-        border-top: transparent;
     }
 
     /* Recherche et filtres */
@@ -609,5 +662,5 @@ footer {
         display: none;
     }
 
-    
+
 }
