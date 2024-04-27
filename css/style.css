@@ -256,13 +256,19 @@ a {
 
 /************************ filtres**********************/
 .searchFilters {
-    display: flex;
-    margin-top: 2rem;
+     display: flex;
     flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 18px;
+    column-gap: 3rem;
+    margin-top: 2rem;
 }
-
+.filtres_categories {
+    display: flex;
+    margin-left: -33px;
+}
 .searchFiltersTitle {
-    margin: 0 1rem 1rem 0;
+    margin: 0 2rem 1rem 0;
     display: flex;
     align-items: center;
 }
@@ -277,6 +283,7 @@ a {
     cursor: pointer;
     transition-duration: 0.1s;
     font-weight: bold;
+    width: 10rem;
 }
 
 .searchFiltersFilter:last-child {
@@ -336,6 +343,19 @@ a {
 .searchResultText {
     margin: 0;
 }
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (767.98px <= width <= 1024px) {
+    .filtres_categories {
+        margin-right: 1rem;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 53px;
+        margin-left: -86px;
+    }
+}
+
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
@@ -371,6 +391,7 @@ a {
 
     .searchFiltersFilter {
         margin-right: 1rem;
+        
     }
 
     .searchFormSubmitinputText {
@@ -414,8 +435,6 @@ a {
     border-radius: 1.5rem;
     padding: 2rem;
   }
-
-}
 
 .hebergement-title {
     /*display: flex;
@@ -565,11 +584,6 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (767.98px <= width <= 1024px) {
-
-    .hebergement-cards {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -600,7 +614,6 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-
 }
 
 /* Small devices (phones, less than 768px) */
@@ -627,13 +640,16 @@ a {
     }
     .populaires {
         margin-left: 0;
-        width: 95%;
+        width: 100%;
+        padding: 1rem 1.5rem 1rem 0.5rem;
+        border-radius: 0rem;
+        margin:0 0.25rem 1rem -1rem;
     }
     .populaires-cards {
         flex-direction: column;
         grid-template-columns: 1fr;
     }
-
+    
 
 }
 
@@ -679,7 +695,7 @@ a {
     width: 100%;
     height: 340px;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 
