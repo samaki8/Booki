@@ -256,21 +256,19 @@ a {
 
 /************************ filtres**********************/
 .searchFilters {
-     display: flex;
-    flex-wrap: wrap;
-    font-weight: bold;
-    font-size: 18px;
-    column-gap: 3rem;
+    display: flex;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
-.filtres_categories {
+/*.filtres_categories {
     display: flex;
     margin-left: -33px;
-}
+}*/
 .searchFiltersTitle {
     margin: 0 2rem 1rem 0;
     display: flex;
     align-items: center;
+    
 }
 
 .searchFiltersFilter {
@@ -345,23 +343,15 @@ a {
 }
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (767.98px <= width <= 1024px) {
-    .filtres_categories {
-        margin-right: 1rem;
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 53px;
-        margin-left: -86px;
-    }
+    .searchFiltersTitle {
+        width: 100%;
+      }
 }
 
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
 
-
-    /* Recherche et filtres */
 
     .searchForm {
         display: flex;
@@ -407,15 +397,15 @@ a {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    justify-content: space-between;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 1.5rem;
     box-sizing: border-box;
     display: flex;
-    /*padding-left: 46px;
-    padding-right: 46px;*/
+    border-radius: 20px;
+    padding: 30px;
 }
 
 /***************************************** Hebergements ***********/
@@ -595,6 +585,7 @@ a {
     .populaires {
         width: 100%;
         margin-top: 50px;
+        margin-left: 0;
     }
 
     .populaires-cards {
@@ -612,7 +603,7 @@ a {
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -621,6 +612,8 @@ a {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        padding: 2%;
+        margin: 2%;
     }
     .hebergements {
         width: 100%;
@@ -660,9 +653,6 @@ a {
     display: grid;
     column-gap: 2rem;
     margin: 4rem 0;
-    background-color: #F2F2F2;
-    border-radius: 1.5rem;
-    padding: 2rem;
 }
 
 .title-activites {
@@ -678,7 +668,7 @@ a {
     grid-gap: 15px;
     padding: 30px;
     gap: 30px;
-    /* grid-auto-rows: minmax(46px, auto);*/
+    grid-auto-rows: minmax(46px, auto);
 }
 
 .card-activites .card {
@@ -688,14 +678,13 @@ a {
     display: flex;
     flex-direction: column;
     transition-duration: 0.1s;
-    padding: 0;
 }
 
 .card-activites .card img {
     width: 100%;
     height: 340px;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 
@@ -718,6 +707,41 @@ a {
     margin: 1.25rem -3rem 0.75rem 1rem
 }
 
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (767.98px <= width <= 1024px) {
+    .card-activites .card img {
+        height: 10rem;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+
+    .activites {
+        margin; 0;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        row-gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+    }
+    
+    .card-activites {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            margin-top: 30px;
+            height: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .card-activites .card img {
+            height: 300px;
+        }
+}
 /****************************************footer*****************/
 footer {
     display: flex;
@@ -760,7 +784,20 @@ footer {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+/****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-   
+@media screen and (767.98px <= width <= 1024px) {
+
+}
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+    footer {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    }
+    .footercolumncontent {
+        justify-items: flex-start;
+
+
 }
