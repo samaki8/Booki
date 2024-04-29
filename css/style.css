@@ -378,9 +378,12 @@ a {
     .searchFiltersTitle {
         width: 100%;
     }
-
+    .searchFiltersFilterTitle {
+        font-size: 1em;
+    }
     .searchFiltersFilter {
         margin-right: 1rem;
+        width: 9rem;
         
     }
 
@@ -758,6 +761,9 @@ a {
         }
         .card-activites .card img {
             height: 12em;
+        }
+        .card-activites .card {
+            padding: 0;
         }
 }
 /****************************************footer*****************/
