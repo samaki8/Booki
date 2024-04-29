@@ -692,7 +692,7 @@ a {
     width: 67%;
     padding-left: 4px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
 }
@@ -713,33 +713,50 @@ a {
     .card-activites .card img {
         height: 10rem;
     }
+    .card-activites .card-content {
+        width: 67%;
+        padding-left: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
 }
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
 
     .activites {
-        margin; 0;
+       /* margin; 0;
         display: flex;
         flex-direction: column;
         padding: 2rem;
         row-gap: 2rem;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+        grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;*/
+       /* padding: 2%;
+          margin: 2%;*/;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5em;
     }
-    
+    .title-activites {
+        margin: 3.25rem -3rem 1.75rem 0rem;
+    }
     .card-activites {
-            width: 100%;
+            width: 95%;
             display: flex;
             flex-direction: column;
             align-content: space-between;
-            margin-top: 30px;
+            padding: 0%;
+            margin: 2%;
+            /*margin-top: 30px;
             height: 100%;
             padding-left: 25px;
-            padding-right: 25px;
+            padding-right: 25px;*/
         }
         .card-activites .card img {
-            height: 300px;
+            height: 12em;
+    
         }
 }
 /****************************************footer*****************/
@@ -795,9 +812,16 @@ footer {
     flex-direction: column;
     padding: 0;
     margin: 0;
+    margin-top: 5rem;
+    background-color: #F2F2F2;
     }
     .footercolumncontent {
         justify-items: flex-start;
+    }
+    .footerColumnwrapper {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
 
 
 }
