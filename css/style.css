@@ -462,7 +462,7 @@ a {
     padding: 0.375rem;
     border-radius: 1.25rem;
     box-shadow: 0 0 16px #0000002e;
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
     cursor: pointer;
     box-sizing: border-box;
     height: 100%;
@@ -540,6 +540,7 @@ a {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    transition-duration: 0.2s;
 }
 
 .populaires-cards img {
@@ -677,7 +678,7 @@ a {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
 }
 
 .card-activites .card img {
