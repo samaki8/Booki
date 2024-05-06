@@ -159,10 +159,10 @@ a {
     }
     
     .headerNavLink {
-        border-top: none;
+       /* border-top: none;*/
         border-bottom: 3px solid #F2F2F2;
         width: 50%;
-        transition-duration: 0;
+        transition-duration: 0.3;
     }
 
     .headerNavLink [data-active=true] {
