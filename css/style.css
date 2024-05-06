@@ -431,8 +431,6 @@ a {
 }
 
 .hebergement-cards .card-title {
-    /* margin-top: 10px;
-    margin-bottom: 4px;*/
     margin: 0.25rem -3rem 0.75rem 0rem
 }
 
@@ -441,14 +439,12 @@ a {
 }
 
 .hebergement-cards .card-rating {
-  /*  margin-bottom: 5px;
-    margin-top: 10px;*/
     margin: 0 0.75rem 0.25rem 0rem;
 }
 
 .afficherplus {
-  /*  margin: 5rem 0rem -1.5rem 0rem;*/
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 18px;
 }
 /****** Populaires ***********/
 .populaires {
@@ -606,6 +602,9 @@ a {
     .populaires-cards img {
         width: 110.67px;
         height: 146px;
+    }
+    .afficherplus {
+        margin-left: 0.5rem;
     }
 }
 
